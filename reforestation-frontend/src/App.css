@@ -1,0 +1,56 @@
+/* Navigation Bar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: white;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Button Container */
+nav div {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+}
+
+/* General Button Styles */
+nav a,
+nav button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover and Focus States */
+nav a:hover,
+nav button:hover {
+  background-color: #ffffff;
+  color: #007bff;
+  border-color: #ffffff;
+}
+
+nav a:focus,
+nav button:focus {
+  outline: none;
+  background-color: #ffffff;
+  color: #007bff;
+  border-color: #ffffff;
+}
+
+/* Adjust Logout Button Separately if Needed */
+nav button {
+  font-weight: bold;
+}
