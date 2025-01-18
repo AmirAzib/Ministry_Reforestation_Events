@@ -40,16 +40,15 @@ A web-based application developed for the Tunisian Ministry of Environment to cr
 - **POST** `/auth/login`: Authenticate and obtain a token.
 
 ### **Events**
-- **GET** `/events`: List all events.
+- **GET** `/events`: List all events (all users)
 - **POST** `/events`: Create a new event (ministry users only).
 - **PUT** `/events/{event_id}`: Update an event (ministry users only).
-- **DELETE** `/events/{event_id}`: Delete an event (ministry users only).
 
 ### **Registrations**
-- **POST** `/events/{event_id}/register`: Register for an event (volunteers).
+- **POST** `/events/{event_id}/register`: Register for an event (individuals and university clubs).
 
 ### **Sponsorships**
-- **POST** `/sponsorships`: Create a sponsorship (companies).
+- **POST** `/sponsorships`: Create a sponsorship (companies only).
 
 ---
 
