@@ -29,7 +29,6 @@ A web-based application developed for the Tunisian Ministry of Environment to cr
   - Axios
 
 - **Development Tools:**
-  - Docker
   - Visual Studio Code
 
 ---
@@ -41,16 +40,15 @@ A web-based application developed for the Tunisian Ministry of Environment to cr
 - **POST** `/auth/login`: Authenticate and obtain a token.
 
 ### **Events**
-- **GET** `/events`: List all events.
+- **GET** `/events`: List all events (all users)
 - **POST** `/events`: Create a new event (ministry users only).
 - **PUT** `/events/{event_id}`: Update an event (ministry users only).
-- **DELETE** `/events/{event_id}`: Delete an event (ministry users only).
 
 ### **Registrations**
-- **POST** `/events/{event_id}/register`: Register for an event (volunteers).
+- **POST** `/events/{event_id}/register`: Register for an event (individuals and university clubs).
 
 ### **Sponsorships**
-- **POST** `/sponsorships`: Create a sponsorship (companies).
+- **POST** `/sponsorships`: Create a sponsorship (companies only).
 
 ---
 
@@ -64,16 +62,13 @@ A web-based application developed for the Tunisian Ministry of Environment to cr
    cd <repository-name>
    ```
 
-2. Set up the environment variables in a `.env` file (e.g., database URL, secret keys).
-
-3. Build and run the backend:
+2. Run the commmand
    ```bash
-   docker-compose up
+   uvicorn app:app --reload   
    ```
-
-4. Access the API documentation at:
+3. Access the API documentation at:
    ```
-http://localhost:8000/docs
+   http://localhost:8000/docs
    ```
 
 ### **Frontend**
@@ -97,15 +92,3 @@ http://localhost:8000/docs
    ```
    http://localhost:3000
    ```
-
----
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
