@@ -14,7 +14,6 @@ from schemas import (
     EventRegistrationSchema,
     UserCreate,
     UserResponse,
-    UserLogin,
     UserLoginResponse,
     EventCreate,
     EventUpdate,
@@ -28,14 +27,6 @@ from schemas import (
 # FastAPI app
 app = FastAPI()
 
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Add your frontend's URL here
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Initialize database
 Base.metadata.create_all(bind=engine)
@@ -263,3 +254,12 @@ def create_sponsorship(
         sponsorship_amount=new_sponsorship.sponsorship_amount,
         description=new_sponsorship.description,
     )
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
